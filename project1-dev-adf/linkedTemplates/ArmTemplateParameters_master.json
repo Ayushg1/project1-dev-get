@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "project1-dev-adf"
 		},
+		"LS_DEV_AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://project1-dev-kvault.vault.azure.net/"
+		},
 		"containerUri": {
 			"value": ""
 		},

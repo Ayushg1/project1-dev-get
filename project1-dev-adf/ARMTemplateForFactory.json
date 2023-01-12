@@ -6,6 +6,10 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "project1-dev-adf"
+		},
+		"LS_DEV_AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://project1-dev-kvault.vault.azure.net/"
 		}
 	},
 	"variables": {
@@ -33,6 +37,19 @@
 					"cancelAfter": {}
 				},
 				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/LS_DEV_AzureKeyVault1')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureKeyVault",
+				"typeProperties": {
+					"baseUrl": "[parameters('LS_DEV_AzureKeyVault1_properties_typeProperties_baseUrl')]"
+				}
 			},
 			"dependsOn": []
 		}
