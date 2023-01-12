@@ -1,0 +1,56 @@
+{
+	"name": "OutputDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "customer.scv",
+				"container": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "customer_id",
+				"type": "String"
+			},
+			{
+				"name": "Customerslastname",
+				"type": "String"
+			},
+			{
+				"name": "Customersfirstname",
+				"type": "String"
+			},
+			{
+				"name": "CustomersCountry",
+				"type": "String"
+			},
+			{
+				"name": "Customersage",
+				"type": "String"
+			},
+			{
+				"name": "Customersgender",
+				"type": "String"
+			},
+			{
+				"name": "Customersemail",
+				"type": "String"
+			},
+			{
+				"name": "Customersprofession",
+				"type": "String"
+			}
+		]
+	}
+}
