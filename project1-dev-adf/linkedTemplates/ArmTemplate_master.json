@@ -7,6 +7,14 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "project1-dev-adf"
 		},
+		"LS_AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "dev-blobstorage"
+		},
+		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://project1-dev-kvault.vault.azure.net/"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -33,6 +41,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
+						"value": "[parameters('LS_AzureKeyVault_properties_typeProperties_baseUrl')]"
+					},
+					"LS_AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('LS_AzureBlobStorage1_properties_typeProperties_connectionString_secretName')]"
 					}
 				}
 			},

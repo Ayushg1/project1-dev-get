@@ -5,6 +5,12 @@
 		"factoryName": {
 			"value": "project1-dev-adf"
 		},
+		"LS_AzureBlobStorage1_properties_typeProperties_connectionString_secretName": {
+			"value": "dev-blobstorage"
+		},
+		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://project1-dev-kvault.vault.azure.net/"
+		},
 		"containerUri": {
 			"value": ""
 		},
